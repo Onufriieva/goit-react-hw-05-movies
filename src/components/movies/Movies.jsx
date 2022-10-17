@@ -36,7 +36,7 @@ const Movies = () => {
         if(!movies){
           return;
         }
-    }, [searchQuery]);
+    }, [searchQuery, movies]);
  
 
     return(
