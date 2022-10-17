@@ -20,7 +20,8 @@ const Movies = () => {
        
     const handleSubmit = e => {
         e.preventDefault();  
-        setSearchParams({ movie: query });
+        // setSearchParams({ movie: query });
+        setSearchParams( { movie: query } || {})
         setQuery('');
     };     
     
