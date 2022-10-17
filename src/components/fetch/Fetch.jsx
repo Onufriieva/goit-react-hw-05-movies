@@ -8,7 +8,7 @@ import axios from "axios";
   
   export async function fetchMoviesBySearchQuery(query) {
     try {
-      const response = await axios.get(`${BASE_URL}/search/movie/?query=${query}&api_key=${KEY}&page=1`)     
+      const response = await axios.get(`${BASE_URL}/search/movie/?query=${query}&api_key=${KEY}`)     
       const arrayMovies = await response.data.results;   
       return arrayMovies; 
       }        
