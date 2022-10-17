@@ -8,7 +8,7 @@ import axios from "axios";
   
   export async function fetchMoviesBySearchQuery(query) {
     try {
-      const response = await axios.get(`${BASE_URL}/search/movie/?query=${query}&api_key=${KEY}`)     
+      const response = await axios.get(`${BASE_URL}/search/movie/?query=${query}&api_key=${KEY}&page=1`)     
       const arrayMovies = await response.data.results;   
       return arrayMovies; 
       }        
@@ -28,8 +28,6 @@ import axios from "axios";
       console.log(error)
     }
   };
-
-  fetchMoviesTrending()
 
     
   export async function fetchMoviesById(id) {
@@ -65,6 +63,4 @@ import axios from "axios";
       catch(error) {
       console.log(error)
       }
-    }
-  
-  // fetchMoviesByActor(343611)
+    }  

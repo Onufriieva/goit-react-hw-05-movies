@@ -28,9 +28,7 @@ const Movies = () => {
     useEffect(() => {  
         if(searchQuery) { 
           setLoading(true)   
-          fetchMoviesBySearchQuery(searchQuery).then(response => {
-            setMovies(prev => [...prev, ...response]); 
-         })
+          fetchMoviesBySearchQuery(searchQuery).then(setMovies)
          .catch(error => console.log(error))
          .finally(setLoading(false))
         } 
@@ -38,8 +36,7 @@ const Movies = () => {
         if(!movies){
           return;
         }
-    }, [searchQuery, movies]);
-
+    }, [searchQuery]);
  
 
     return(
