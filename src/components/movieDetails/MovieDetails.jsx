@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useLocation, NavLink } from 'react-router-dom';
 import Loading from 'components/loading/Loading';
 import noImage from '../../images/no-image.png';
-import { Button, NavLinkStyled, ListItem, ListLink } from "./MovieDetailStyled";
+import { Button, ListItem, ListLink } from "./MovieDetailStyled";
 
 
 const MovieDetails = () => {

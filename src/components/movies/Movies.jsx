@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams, Link, useLocation } from 'react-router-dom'; 
+import { useSearchParams, useLocation } from 'react-router-dom'; 
 import {fetchMoviesBySearchQuery} from 'components/fetch/Fetch';
 import Loading from 'components/loading/Loading';
 import noImage from '../../images/no-image.png';
@@ -38,7 +38,7 @@ const Movies = () => {
         if(!movies){
           return;
         }
-    }, [searchQuery]);
+    }, [searchQuery, movies]);
 
  
 
